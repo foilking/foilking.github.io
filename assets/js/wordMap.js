@@ -40,7 +40,9 @@ function cleanUp()
 		createCloud();
 	}
 	function createCloud() {
-		$("*").not("html, script, canvas, audio, video, noscript, meta, link").each(function(){
+		// Would rather do something that would exclude certain tags with $('*').not(), but for this, just going to have a list of which items I'll be looking through
+		$("div, span, p, article, aside, blockquote, fieldset, label, h1, h2, h3, h4, h5, h6, header, legend, li, ul, a, menu, menuitem, nav, ol, option, pre, section, select, strong, summary, table, tbody, td, tr, tfoot, th, thead, title")
+		.each(function(){
 			var elText = $(this).text();
 			var words = elText.split(' ');
 			for(var i = 0; i < words.length; i++) {
