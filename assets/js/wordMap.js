@@ -95,7 +95,7 @@ function cleanUp()
 				var amount = wordArray[n].count;
 				var fontSize = (3 * amount);
 				largestFont = largestFont > fontSize ? largestFont : fontSize;
-				var wordSpan = document.createElement('div');
+				var wordSpan = document.createElement('span');
 				wordSpan.setAttribute('class', 'wordCloud');
 				wordSpan.setAttribute('style', 'display:inlinemargin:5px; font-size:' + fontSize + 'px;');
 				wordSpan.innerHTML = word;
