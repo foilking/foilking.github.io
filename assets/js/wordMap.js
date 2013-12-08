@@ -17,6 +17,7 @@
 			for(var i = 0; i < words.length; i++) {
 				var word = words[i];
 				if (word.length > 4) {
+					console.log(word)
 					for(var j = 0; j < wordMap.length; j++) {
 						var wordCounter = wordMap[j];
 						if (wordCounter.word === word) {
@@ -28,9 +29,9 @@
 							});
 						}
 					}
+					console.log(wordMap);
 				}
 			}
 		});
-		console.log(wordMap);
 	}
 })();
