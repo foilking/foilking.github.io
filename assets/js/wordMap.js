@@ -28,7 +28,7 @@
 			var words = elText.split(' ');
 			for(var i = 0; i < words.length; i++) {
 				var word = words[i].replace(/[\.,-\/#!$%\^&\*;:{}=\-_`~()]/g,"").replace(/\s{2,}/g," ").trim().toLowerCase();
-				if (word.length > 4) {
+				if (word.length > 3) {
 					for(var j = 0; j < wordMap.length; j++) {
 						var startLetter = wordMap[j].start;
 						if (startLetter == word.charAt(0)) {
@@ -55,5 +55,37 @@
 			}
 		});
 		console.log(wordMap);
+		function cleanUp()
+		{
+			node = document.getElementsByTagName("body")[0];
+			var a = [];
+			var re = new RegExp('\\bwordCloud\\b');
+			var els = node.getElementsByTagName("*");
+			for(var i=0,j=els.length; i<j; i++)
+			if(re.test(els[i].className))a.push(els[i]);
+
+			for(var x in a)
+			{
+				if (a[x].parentNode)
+				{
+					a[x].parentNode.removeChild(a[x]);
+				}
+			}
+		}
+
+		var shade = document.createElement("div");
+		shade.setAttribute('class','wordCloud');
+		shade.setAttribute('id','shade');
+		shade.setAttribute('style','background-color:#000;height:100%;left:0;opacity:0.65;position:fixed;top:0;width:100%;z-index:1001;');
+		
+		var centr = document.createElement("div");
+		centr.setAttribute('class','wordCloud');
+		centr.setAttribute('id','centr');
+		centr.setAttribute('style','background-color:transparent;height:100%;left:0;position:fixed;text-align:center;top:0;width:100%;z-index:1001;');
+
+		document.body.appendChild(shade);
+		document.body.appendChild(centr);
+		document.body.setAttribute('onclick','cleanUp()');
 	}
+	
 })();
