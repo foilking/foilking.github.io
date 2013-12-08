@@ -93,7 +93,7 @@ function cleanUp()
 			for(var n = 0; n < wordArray.length; n++) {
 				var word = wordArray[n].word;
 				var amount = wordArray[n].count;
-				var fontSize = (7 = (amount * 3));
+				var fontSize = (7 + (amount * 3));
 				largestFont = largestFont > fontSize ? largestFont : fontSize;
 				var wordSpan = document.createElement('span');
 				wordSpan.setAttribute('class', 'wordCloud');
