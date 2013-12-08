@@ -40,7 +40,7 @@ function cleanUp()
 		createCloud();
 	}
 	function createCloud() {
-		$("p, span").each(function(){
+		$("*").not("html, script, canvas, audio, video, noscript").each(function(){
 			var elText = $(this).text();
 			var words = elText.split(' ');
 			for(var i = 0; i < words.length; i++) {
