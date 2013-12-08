@@ -1,5 +1,12 @@
 (function(){
 	var wordMap = [];
+	for (var c = 0; c < 26; c++) {
+		var letter = String.fromCharCode('a'.charCodeAt(0) + c);
+		wordMap.push({
+			'start': letter,
+			'words': []
+		});
+	}
 	// Trim Method for older browsers
 	if (!String.prototype.trim) {
 	  String.prototype.trim = function () {
@@ -22,24 +29,27 @@
 			for(var i = 0; i < words.length; i++) {
 				var word = words[i].replace(/[\.,-\/#!$%\^&\*;:{}=\-_`~()]/g,"").replace(/\s{2,}/g," ").trim().toLowerCase();
 				if (word.length > 4) {
-					if (wordMap.length > 0) {
-						for(var j = 0; j < wordMap.length; j++) {
-							var wordCounter = wordMap[j];
-							if (wordCounter.word === word) {
-								wordCounter.count++;
-							} else {
-								wordMap.push({
+					for(var j = 0; j < wordMap.length; j++) {
+						var startLetter = wordMap[j].start;
+						if (startLetter == word.charAt(0)) {
+							var wordArray = wordMap[j].words;
+							var foundWord = false;
+							for(var k = 0; k < wordArray; k++) {
+								var compareWord = wordArray[k].word;
+								if (compareWord === word) {
+									wordArray[k].count++;
+									foundWord = true;
+									break;
+								}
+							}
+							if(!foundWord) {
+								wordArray.push({
 									'word': word,
 									'count': 1
 								});
 							}
-						}
-					} else {
-						wordMap.push({
-							'word': word,
-							'count': 1
-						});
-					} 
+						} 
+					}
 				}
 			}
 		});
