@@ -96,6 +96,7 @@ function cleanUp()
 				var wordSpan = document.createElement('span');
 				wordSpan.setAttribute('class', 'wordCloud');
 				wordSpan.setAttribute('style', 'margin:5px; font-size:' + (3 * amount) + 'px;');
+				wordSpan.innerHTML = word;
 				wordDiv.appendChild(wordSpan);
 			}
 		}
