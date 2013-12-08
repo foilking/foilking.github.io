@@ -84,6 +84,23 @@ function cleanUp()
 		centr.setAttribute('id','centr');
 		centr.setAttribute('style','background-color:transparent;height:100%;left:0;position:fixed;text-align:center;top:0;width:100%;z-index:1001;');
 
+		var wordDiv = document.createElement("div");
+		wordDiv.setAttribute('class','wordCloud');
+		wordDiv.setAttribute('id','wordDiv');
+		wordDiv.setAttribute('style','margin:25px auto auto auto;background-color:#FFF;height:700px;width:600px;z-index:1001;-moz-border-radius:20px;'); 
+		for(var m = 0; m < wordMap.length; m++) {
+			var wordArray = wordMap[m].words;
+			for(var n = 0; n < wordArray.length; n++) {
+				var word = wordArray[n].word;
+				var amount = wordArray[n].count;
+				var wordSpan = document.createElement('span');
+				wordSpan.setAttribute('class', 'wordCloud');
+				wordSpan.setAttribute('style', 'margin:5px; font-size:' + (3 * amount) + 'px;');
+				wordDiv.appendChild(wordSpan);
+			}
+		}
+
+		centr.appendChild(wordDiv);
 		document.body.appendChild(shade);
 		document.body.appendChild(centr);
 		document.body.setAttribute('onclick','cleanUp()');
