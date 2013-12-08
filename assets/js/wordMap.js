@@ -44,7 +44,7 @@ function cleanUp()
 			var elText = $(this).text();
 			var words = elText.split(' ');
 			for(var i = 0; i < words.length; i++) {
-				var word = words[i].replace(/[\.,-\/#!$%\^&\*;:{}=\-_`~()]/g,"").replace(/\s{2,}/g," ").trim().toLowerCase();
+				var word = words[i].replace(/[\.,-\/#!$%\^&\*;:{}=\-_`~()]/g,"").replace(/\s{2,}/g," ").replace(/\s/g,"").trim().toLowerCase();
 				if (word.length > 3) {
 					for(var j = 0; j < wordMap.length; j++) {
 						var startLetter = wordMap[j].start;
