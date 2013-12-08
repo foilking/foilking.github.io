@@ -18,6 +18,12 @@
 				var word = words[i];
 				if (word.length > 4) {
 					console.log(word)
+					if (wordMap.length === 0) {
+						wordMap.push({
+							'word': word,
+							'count': 1
+						});
+					}
 					for(var j = 0; j < wordMap.length; j++) {
 						var wordCounter = wordMap[j];
 						if (wordCounter.word === word) {
