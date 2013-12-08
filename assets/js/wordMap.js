@@ -34,7 +34,7 @@
 						if (startLetter == word.charAt(0)) {
 							var wordArray = wordMap[j].words;
 							var foundWord = false;
-							for(var k = 0; k < wordArray; k++) {
+							for(var k = 0; k < wordArray.length; k++) {
 								var compareWord = wordArray[k].word;
 								if (compareWord === word) {
 									wordArray[k].count++;
