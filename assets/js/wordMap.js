@@ -1,6 +1,11 @@
 (function(){
 	var wordMap = [];
-
+	// Trim Method for older browsers
+	if (!String.prototype.trim) {
+	  String.prototype.trim = function () {
+	    return this.replace(/^\s+|\s+$/gm, '');
+	  };
+	}
 	// Checking for jQuery, using 1.10.2 for older browser support
 	if(!($ = window.jQuery)) { // typeof jQuery=='undefined' works too  
 	    script = document.createElement( 'script' );  
@@ -11,11 +16,11 @@
 		createCloud();
 	}
 	function createCloud() {
-		$("*").each(function(){
+		$("p, span").each(function(){
 			var elText = $(this).text();
 			var words = elText.split(' ');
 			for(var i = 0; i < words.length; i++) {
-				var word = words[i];
+				var word = words[i].trim();
 				if (word.length > 4) {
 					console.log(word)
 					if (wordMap.length === 0) {
