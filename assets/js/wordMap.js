@@ -1,3 +1,20 @@
+function cleanUp()
+{
+	node = document.getElementsByTagName("body")[0];
+	var a = [];
+	var re = new RegExp('\\bwordCloud\\b');
+	var els = node.getElementsByTagName("*");
+	for(var i=0,j=els.length; i<j; i++)
+	if(re.test(els[i].className))a.push(els[i]);
+
+	for(var x in a)
+	{
+		if (a[x].parentNode)
+		{
+			a[x].parentNode.removeChild(a[x]);
+		}
+	}
+}
 (function(){
 	var wordMap = [];
 	for (var c = 0; c < 26; c++) {
@@ -55,23 +72,7 @@
 			}
 		});
 		console.log(wordMap);
-		function cleanUp()
-		{
-			node = document.getElementsByTagName("body")[0];
-			var a = [];
-			var re = new RegExp('\\bwordCloud\\b');
-			var els = node.getElementsByTagName("*");
-			for(var i=0,j=els.length; i<j; i++)
-			if(re.test(els[i].className))a.push(els[i]);
-
-			for(var x in a)
-			{
-				if (a[x].parentNode)
-				{
-					a[x].parentNode.removeChild(a[x]);
-				}
-			}
-		}
+		cleanUp();
 
 		var shade = document.createElement("div");
 		shade.setAttribute('class','wordCloud');
