@@ -97,7 +97,7 @@ function cleanUp()
 				var fontSize = (7 + (amount * 2));
 				var wordSpan = document.createElement('span');
 				wordSpan.setAttribute('class', 'wordCloud');
-				wordSpan.setAttribute('style', 'display:inline-block;margin:5px; font-size:' + fontSize + 'px;');
+				wordSpan.setAttribute('style', 'display:inline-block;margin:5px; font-size:' + fontSize + 'px;text-align:center;vertical-align:middle;line-height:' + fontSize + 'px');
 				wordSpan.innerHTML = word;
 				wordDiv.appendChild(wordSpan);
 			}
