@@ -39,7 +39,7 @@
 								if (compareWord === word) {
 									wordArray[k].count++;
 									foundWord = true;
-									
+									break;
 								}
 							}
 							if(!foundWord) {
