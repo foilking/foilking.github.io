@@ -20,29 +20,29 @@
 			var elText = $(this).text();
 			var words = elText.split(' ');
 			for(var i = 0; i < words.length; i++) {
-				var word = words[i].trim();
+				var word = words[i].replace(/[\.,-\/#!$%\^&\*;:{}=\-_`~()]/g,"").replace(/\s{2,}/g," ").trim().toLowerCase();
 				if (word.length > 4) {
-					console.log(word)
-					if (wordMap.length === 0) {
+					if (wordMap.length > 0) {
+						for(var j = 0; j < wordMap.length; j++) {
+							var wordCounter = wordMap[j];
+							if (wordCounter.word === word) {
+								wordCounter.count++;
+							} else {
+								wordMap.push({
+									'word': word,
+									'count': 1
+								});
+							}
+						}
+					} else {
 						wordMap.push({
 							'word': word,
 							'count': 1
 						});
-					}
-					for(var j = 0; j < wordMap.length; j++) {
-						var wordCounter = wordMap[j];
-						if (wordCounter.word === word) {
-							wordCounter.count++;
-						} else {
-							wordMap.push({
-								'word': word,
-								'count': 1
-							});
-						}
-					}
-					console.log(wordMap);
+					} 
 				}
 			}
 		});
+		console.log(wordMap);
 	}
 })();
