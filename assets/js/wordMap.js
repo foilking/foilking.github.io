@@ -41,7 +41,7 @@ function cleanUp()
 	}
 	function createCloud() {
 		// Would rather do something that would exclude certain tags with $('*').not(), but for this, just going to have a list of which items I'll be looking through
-		$("div, span, p, article, aside, blockquote, fieldset, label, h1, h2, h3, h4, h5, h6, header, legend, li, ul, a, menu, menuitem, nav, ol, option, pre, section, select, strong, summary, table, tbody, td, tr, tfoot, th, thead, title")
+		$("div, span, p, article, h1, h2, h3, h4, h5, h6")
 		.each(function(){
 			var elText = $(this).text();
 			var words = elText.split(' ');
