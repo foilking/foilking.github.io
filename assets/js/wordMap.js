@@ -39,7 +39,7 @@
 								if (compareWord === word) {
 									wordArray[k].count++;
 									foundWord = true;
-									break;
+									
 								}
 							}
 							if(!foundWord) {
@@ -47,7 +47,8 @@
 									'word': word,
 									'count': 1
 								});
-							}
+							} 
+							break;
 						} 
 					}
 				}
