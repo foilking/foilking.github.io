@@ -89,14 +89,12 @@ function cleanUp()
 		var wordDiv = document.createElement("div");
 		wordDiv.setAttribute('class','wordCloud');
 		wordDiv.setAttribute('id','wordDiv');
-		var largestFont = 0;
 		for(var m = 0; m < wordMap.length; m++) {
 			var wordArray = wordMap[m].words;
 			for(var n = 0; n < wordArray.length; n++) {
 				var word = wordArray[n].word;
 				var amount = wordArray[n].count;
-				var fontSize = (7 + (amount * 3));
-				largestFont = largestFont > fontSize ? largestFont : fontSize;
+				var fontSize = (7 + (amount * 2));
 				var wordSpan = document.createElement('span');
 				wordSpan.setAttribute('class', 'wordCloud');
 				wordSpan.setAttribute('style', 'display:inline-block;margin:5px; font-size:' + fontSize + 'px;');
@@ -104,7 +102,7 @@ function cleanUp()
 				wordDiv.appendChild(wordSpan);
 			}
 		}
-		wordDiv.setAttribute('style','margin:25px auto auto auto;background-color:#FFF;height:700px;width:600px;z-index:1001;-moz-border-radius:20px;padding:' + (largestFont / 2) + 'px 5px 5px'); 
+		wordDiv.setAttribute('style','margin:25px auto auto auto;background-color:#FFF;height:700px;width:600px;z-index:1001;-moz-border-radius:20px;padding:25px 5px 5px'); 
 
 		centr.appendChild(wordDiv);
 		document.body.appendChild(shade);
