@@ -102,7 +102,7 @@ function cleanUp()
 				wordDiv.appendChild(wordSpan);
 			}
 		}
-		wordDiv.setAttribute('style','margin:25px auto auto auto;background-color:#FFF;height:700px;width:600px;z-index:1001;-moz-border-radius:20px;padding:25px 5px 5px'); 
+		wordDiv.setAttribute('style','margin:5px;background-color:#FFF;z-index:1001;-moz-border-radius:20px;padding:25px 5px 5px'); 
 
 		centr.appendChild(wordDiv);
 		document.body.appendChild(shade);
