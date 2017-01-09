@@ -96,6 +96,9 @@ a.btn-cta-secondary:hover,
 .label-theme.layer-one {
   background: #e66025;
 }
+.label-theme.lightburn {
+  background: #0a3866;
+}
 a.dotted-link {
   border-bottom: 1px dotted #778492;
   color: #778492;
