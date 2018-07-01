@@ -90,6 +90,12 @@ a.btn-cta-secondary:hover,
   background: #3aaa64;
   font-size: 12px;
 }
+.label-theme.open-source {
+  background: violet;
+}
+.label-theme.msoe {
+  background: #A10A04;
+}
 .label-theme.ascedia {
   background: #c41425;
 }
@@ -99,6 +105,10 @@ a.btn-cta-secondary:hover,
 .label-theme.lightburn {
   background: #0a3866;
 }
+.label-theme.generac {
+  background: #469e7e;
+}
+
 a.dotted-link {
   border-bottom: 1px dotted #778492;
   color: #778492;
