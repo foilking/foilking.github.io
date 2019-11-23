@@ -108,6 +108,9 @@ a.btn-cta-secondary:hover,
 .label-theme.generac {
   background: #469e7e;
 }
+.label-theme.milwaukee-tool {
+  background: #db011c;
+}
 
 a.dotted-link {
   border-bottom: 1px dotted #778492;
