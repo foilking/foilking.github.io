@@ -1,96 +1,347 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
 <head>
-    <title>Kevin Curtis</title>
-    
+    <title>Kevin Curtis - Web Developer</title>
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Blog Template">
-    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
-    <link rel="shortcut icon" href="favicon.ico"> 
-    
-    <!-- FontAwesome JS-->
-	<script defer src="assets/fontawesome/js/all.min.js"></script>
-    
+    <meta name="description" content="Kevin Curtis - Web Developer">
+    <meta name="author" content="Kevin Curtis">    
+    <link rel="shortcut icon" href="favicon.ico">  
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> 
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
     <!-- Theme CSS -->  
-    <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
-
+    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
 </head> 
 
 <body>
+    <!-- ******HEADER****** --> 
+    <header class="header">
+        <div class="container">                       
+            <img class="profile-image img-responsive pull-left" src="assets/images/profile-3.jpg" alt="Kevin Curtis" />
+            <div class="profile-content pull-left">
+                <h1 class="name">Kevin Curtis</h1>
+                <h2 class="desc">Web App Developer</h2>   
+                <ul class="social list-inline">
+                    <li><a href="https://twitter.com/foilking"><i class="fa fa-twitter"></i></a></li>                   
+                    <li><a href="https://www.linkedin.com/in/kevincurtisfoilking"><i class="fa fa-linkedin"></i></a></li>
+                    <li class="last-item"><a href="https://github.com/foilking/"><i class="fa fa-github-alt"></i></a></li>                  
+                </ul> 
+            </div><!--//profile-->
+            <!-- <a class="btn btn-cta-primary pull-right" href="http://themes.3rdwavemedia.com/" target="_blank"><i class="fa fa-paper-plane"></i> Contact Me</a>               -->
+        </div><!--//container-->
+    </header><!--//header-->
     
-    <header class="header text-center">	    
-	    <h1 class="blog-name pt-lg-4 mb-0"><a href="index.html">Kevin Curtis</a></h1>
-        
-	    <nav class="navbar navbar-expand-lg navbar-dark" >
-           
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-			</button>
+    <div class="container sections-wrapper">
+        <div class="row">
+            <div class="primary col-md-8 col-sm-12 col-xs-12">
+                <section class="about section">
+                    <div class="section-inner">
+                        <h2 class="heading">About Me</h2>
+                        <div class="content">
+                            <p>Since starting writing software with turtles and Legos in middle school, I've been consistently improving my software development skills. I develop well designed and tested websites for clients of all industries. I build great interfaces that are intuitive for users of all levels. In some of my spare time, I work on geeky software projects.</p>                             
+                        </div><!--//content-->
+                    </div><!--//section-inner-->                 
+                </section><!--//section-->
+    
+               <section class="latest section">
+                    <div class="section-inner">
+                        <h2 class="heading">Latest Projects</h2>
+                        <div class="content">    
+                            <div class="item row">
+                                <div class="desc col-md-12 col-sm-12 col-xs-12">
+                                    <h3 class="title"><a href="https://connect.milwaukeetool.com/" target="_blank">Milwaukee Tool Connect</a> <span class="label label-theme milwaukee-tool">Milwaukee Tool</span></h3>
+                                    <p>For Milwaukee Tool, I helped with the rebuild of their distributor sales portal. Using .Net Core and React, I replicated their existing warranty claim process from existing source code, documenting the process as I went along. Additional work was done integrating Square's credit card processing, allowing distributors to purchase tools with credit cards for the first time.</p>
+                                    <p><a class="more-link" href="https://connect.milwaukeetool.com/" target="_blank"><i class="fa fa-external-link"></i> View site</a></p>
+                                </div><!--//desc-->                          
+                            </div><!--//item-->  
+                            <hr class="divider" />
+                 
+                            <div class="item row">
+                                <a class="col-md-4 col-sm-4 col-xs-12" href="https://www.mobilelinkgen.com/default.aspx" target="_blank">
+                                <img class="img-responsive project-image" src="assets/images/projects/mobile-link.png" alt="Mobile Link" />
+                                </a>
+                                <div class="desc col-md-8 col-sm-8 col-xs-12">
+                                    <h3 class="title"><a href="https://www.mobilelinkgen.com/default.aspx" target="_blank">Mobile Link - Wi-Fi</a> <span class="label label-theme generac">Generac</span></h3>
+                                    <p>Generac produces Internet connected generators so users can see the generator's status and get notifications when it's activated. Previously, the generator could only connect via a cellular network. A new piece of hardware was created so a generator could be connected to a home's Wi-Fi network. With this becoming standard on all standby generators, the old Mobile Link system needed to be overhauled so that it could handle the increase in number of generators attached to the system. I helped build out the systems needed to handle the incoming requests and display the new Wi-Fi generators along side the cellular generators, along with the website to help connect the device to the home Wi-Fi and internal systems to help other teams view logs within our system for diagnositics.</p>
+                                    <p><a class="more-link" href="https://www.mobilelinkgen.com/default.aspx" target="_blank"><i class="fa fa-external-link"></i> View the site</a></p>
+                                </div><!--//desc-->                          
+                            </div><!--//item-->
+                            <hr class="divider" />
 
-			<div id="navigation" class="collapse navbar-collapse flex-column" >
-				<div class="profile-section pt-3 pt-lg-0">
-				    <img class="profile-image mb-3 rounded-circle mx-auto" src="assets/images/profile-3.jpg" alt="image" >			
-					
-					<div class="bio mb-3">Hello, I'm Kevin Curtis, software developer by trade, web developer by passion.<br><a href="resume.html">View my resume</a></div><!--//bio-->
-					<ul class="social-list list-inline py-3 mx-auto">
-			            <li class="list-inline-item"><a href="https://twitter.com/foilking"><i class="fab fa-twitter fa-fw"></i></a></li>
-			            <li class="list-inline-item"><a href="https://www.linkedin.com/in/kevincurtisfoilking"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
-			            <li class="list-inline-item"><a href="https://github.com/foilking/"><i class="fab fa-github-alt fa-fw"></i></a></li>
-			        </ul><!--//social-list-->
-			        <hr> 
-				</div><!--//profile-section-->
-				
-				<ul class="navbar-nav flex-column text-left">
-					<li class="nav-item active">
-					    <a class="nav-link" href="index.html"><i class="fas fa-home fa-fw mr-2"></i>Blog Home <span class="sr-only">(current)</span></a>
-					</li>
-					<li class="nav-item">
-					    <a class="nav-link" href="resume.html"><i class="fas fa-user fa-fw mr-2"></i>View my resume</a>
-					</li>
-				</ul>
-				
-				<!-- <div class="my-2 my-md-3">
-				    <a class="btn btn-primary" href="https://themes.3rdwavemedia.com/" target="_blank">Get in Touch</a>
-				</div> -->
-			</div>
-		</nav>
-    </header>
-    
-    <div class="main-wrapper">
-	    <section class="cta-section theme-bg-light py-5">
-		    <div class="container text-center">
-			    <h2 class="heading">Pico-blog</h2>
-			    <div class="intro">A blog with small posts as I think of them.</div>
-		    </div><!--//container-->
-	    </section>
-	    <section class="blog-list px-3 py-5 p-md-5">
-		    <div class="container">
-			    <div class="item mb-5">
-				    <div class="media">
-					    <img class="mr-3 img-fluid post-thumb d-none d-md-flex" src="assets/images/cascadiajs-2020-logo.svg" alt="image">
-					    <div class="media-body">
-						    <h3 class="title mb-1"><a href="pico-blogging.html">CascadiaJS 2020 and pico-blogging</a></h3>
-						    <div class="meta mb-1"><span class="date">Published Oct 11, 2020</span></div>
-						    <div class="intro">A quick summary of the 2 most influential talks I saw at CascadiaJS 2020</div>
-						    <a class="more-link" href="pico-blogging.html">Read more &rarr;</a>
-					    </div><!--//media-body-->
-				    </div><!--//media-->
-			    </div><!--//item-->
-		    </div>
-	    </section>
-	    
-	    <footer class="footer text-center py-2 theme-bg-dark">
-		   
-	        <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
-            <small class="copyright">Designed with <i class="fas fa-heart" style="color: #fb866a;"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
-		   
-	    </footer>
-    
-    </div><!--//main-wrapper-->   
+                            <div class="item row">
+                                <div class="desc col-md-12 col-sm-12 col-xs-12">
+                                    <h3 class="title"><a href="https://foilking.github.io/ts-scryfall/" target="_blank">Cloning Scryfall using TypeScript and React</a> <span class="label label-theme open-source">Open Source</span></h3>
+                                    <p>As an example project for using TypeScript and React, I decided to create a single page application version of <a href="https://www.scryfall.com">Scryfall</a>, a search engine for Magic: The Gathering cards. Using Scryfall's own API, I was able to replicate most of the same functionality of their site.</p>
+                                    <p><a class="more-link" href="https://foilking.github.io/ts-scryfall/" target="_blank"><i class="fa fa-external-link"></i> View demo</a></p>
+                                    <p><a class="more-link" href="https://github.com/foilking/ts-scryfall" target="_blank"><i class="fa fa-external-link"></i> View source on GitHub</a></p>
+                                </div><!--//desc-->                          
+                            </div><!--//item-->
+                        </div><!--//content-->  
+                    </div><!--//section-inner-->                 
+                </section><!--//section-->
+                
+                <section class="projects section">
+                    <div class="section-inner">
+                        <h2 class="heading">Other Projects</h2>
+                        <div class="content">
+                            <div class="item row">
+                                <a class="col-md-4 col-sm-4 col-xs-12" href="http://www.flightforlife.org/ffl-central-app/" target="_blank">
+                                <img class="img-responsive project-image" src="assets/images/projects/FFLCentral.png" alt="Flight For Life Central App" />
+                                </a>
+                                <div class="desc col-md-8 col-sm-8 col-xs-12">
+                                    <h3 class="title"><a href="http://www.flightforlife.org/ffl-central-app/" target="_blank">Flight For Life Central App</a> <span class="label label-theme lightburn">Lightburn</span></h3>
+                                    <p>Flight for Life previously had a mobile application built for iPhone and Android devices to create a simple way for users to call in a rescue helicopter in emergency situations. However, hospitals had issues getting cellular reception inside the buildings, so a web version was requested. Using SignalR and Twilio, I built a chat system that would create an automatic notification to online dispatchers, with a back up notification to the dispatcher's phone via text message. Additonally, the web application integrates with the existing mobile application so dispatchers could contact mobile users via the web interface.</p>
+                                    <p><a class="more-link" href="http://www.flightforlife.org/ffl-central-app/" target="_blank"><i class="fa fa-external-link"></i> View the site</a></p>
+                                </div><!--//desc-->                          
+                            </div><!--//item-->
+                            <hr class="divider" />
+                            <div class="item row">
+                                <a class="col-md-4 col-sm-4 col-xs-12" href="https://foilking.github.io/MarvelAPI/" target="_blank">
+                                    <img class="img-responsive project-image" src="assets/images/projects/Marvel-Logo.png" alt="Marvel API" />
+                                </a>    
+                                <div class="desc col-md-8 col-sm-8 col-xs-12">
+                                    <h3 class="title"><a href="https://foilking.github.io/MarvelAPI/" target="_blank">Marvel API - C# library for Marvel's API</a> <span class="label label-theme open-source">Open Source</span></h3>
+                                    <p>Using RestSharp, I created a wrapper around Marvel's API that transformed the API to use static, nullable variables rather than dynamic strings for the users of the package.</p>
+                                    <p><a class="more-link" href="https://foilking.github.io/MarvelAPI/" target="_blank"><i class="fa fa-external-link"></i> Find out more</a></p>
+                                    <p><a class="more-link" href="https://github.com/foilking/MarvelAPI/" target="_blank"><i class="fa fa-external-link"></i> View source on Github</a></p>
+                                </div><!--//desc-->                      
+                            </div><!--//item-->
+                            <hr class="divider" />
+                            <div class="item row">
+                                <a class="col-md-4 col-sm-4 col-xs-12" href="http://www.pinkglovedance.com/" target="_blank">
+                                    <img class="img-responsive project-image" src="assets/images/projects/pink-glove-dance.png" alt="project name" />
+                                </a>
+                                <div class="desc col-md-8 col-sm-8 col-xs-12">
+                                    <h3 class="title"><a href="http://www.pinkglovedance.com/" target="_blank">Pink Glove Dance - Voting website for breast cancer support</a> <span class="label label-theme layer-one">Layer One Media</span></h3>
+                                    <p> Medline runs a yearly competition, Pink Glove Dance, where medical facilities create a video of people dancing with pink gloves to a selection of songs. The winner of the competition has $50,000 donated to the charity of their choice. Using Umbraco CMS, I built a site where users can register, submit, and vote on videos. The site had to be able to handle large traffic during the voting period. For the 2013 competition, the voting peaked around 50 votes per second. This site won a BMA Milwaukee Bell Award for <a href="http://www.bma-milwaukee.org/press/2013/2014/04/2014-bma-milwaukee-bell-awards-winners-announced">"Websites produced for more than $35,000"</a>.</p>
+                                    <p><a class="more-link" href="http://www.pinkglovedance.com/" target="_blank"><i class="fa fa-external-link"></i> View the site</a></p>
+                                </div><!--//desc-->                          
+                            </div><!--//item-->
+                            <hr class="divider" />
+                            <div class="item row">
 
+                                <a class="col-md-4 col-sm-4 col-xs-12" href="http://www.travelwisconsin.com/fall-color-report" target="_blank">
+                                    <img class="img-responsive project-image" src="assets/images/projects/fall-color-report-1.png" alt="Travel Wisconsin Fall Color Report" />
+                                </a>
+                                <div class="desc col-md-8 col-sm-8 col-xs-12">
+                                    <h3 class="title"><a href="http://www.travelwisconsin.com/fall-color-report">Travel Wisconsin's Fall Color Report</a> <span class="label label-theme ascedia">Ascedia</span></h3>
+                                    <p class="summary">Using information gathered by resources across the state of Wisconsin, this map showed the color of the leaves around the state. First JavaScript heavy project, I dove into the Bing Maps AJAX library and jQuery to create a site that's interactive and easy to use. The report won <a href="http://www.communicatorawards.com/winners/list/?event=8&category=8&award=E">3 Communicator Awards in 2013</a>. Interactive map is only available late summer into early winter; otherwise the entire state is brown with dead leaves :( </p>
+                                    <p><a class="more-link" href="http://www.travelwisconsin.com/fall-color-report" target="_blank"><i class="fa fa-external-link"></i> View the site</a></p>
+                                </div>
+                            </div><!--//item-->
+                            <hr class="divider" />
+                            <div class="item row">
+                                <div class="desc col-md-12 col-sm-12 col-xs-12">
+                                    <h3 class="title"><a href="http://www.jsonline.com/features/technology/94533859.html">Multiplayer Augmented Reality First Person Shooter</a> <span class="label label-theme msoe">MSOE Senior Design</span></h3>
+                                    <p class="summary">In senior design, my team worked on the creation of a multiplayer augmented reality first person shooter. We built a system to display overlays on top of the physical surroundings and keept track of its position in the physical world, a first person shooter game utilizing the previously mentioned system, and the implementation of a wireless system to connect multiple systems to a centralized server for multiplayer interaction.</p>
+                                    <p><a class="more-link" href="https://web.archive.org/web/20150704194400/http://www.jsonline.com/features/technology/94533859.html" target="_blank"><i class="fa fa-external-link"></i> Read news article</a></p>
+                                </div>
+                            </div><!--//item-->
+                            
+                        </div><!--//content-->  
+                    </div><!--//section-inner-->                 
+                </section><!--//section-->
+                
+                <section class="experience section">
+                    <div class="section-inner">
+                        <h2 class="heading">Work Experience</h2>
+                        <div class="content">
+                            <div class="item">
+                                <h3 class="title">Senior Software Developer Contractor - <span class="place"><a href="http://www.generac.com/">Milwaukee Electric Tools</a></span> <span class="year">(2018 - Current)</span></h3>
+                                <p>I work in the IT department, building internal apps and websites. I've helped with their rebuild of the distributor sales portal, including credit card processing via Square. I've worked on their multi-department time tracking tool. Both projects use .Net Core APIs and React front-ends, along with RabbitMQ messaging for long running processes.</p>
+                            </div><!--//item-->
+                            <div class="item">
+                                <h3 class="title">Application Developer - <span class="place"><a href="http://www.generac.com/">Generac Power Systems</a></span> <span class="year">(2017 - 2018)</span></h3>
+                                <p>I work on Mobile Link, which allows users to view data from their Internet connected Home Standby generator. The system uses ASP.NET WebAPI, .Net Core, and Apache Storm to handle incoming messages, MSSQL and HBase with Apache Phoenix to store and retrieve data, and ASP.NET, TypeScript, and React to display data.</p>
+                            </div><!--//item-->
+                            <div class="item">
+                                <h3 class="title">Senior Web Developer - <span class="place"><a href="http://www.lightburndesigns.com/">Lightburn Designs</a></span> <span class="year">(2014 - 2017)</span></h3>
+                                <p>Using ASP.NET, I build sites for clients with complex functionality. I use Umbraco and a proprietary CMS for websites where the client wants to edit their sites. Projects varied between simple presentation site, chat applications, and complex e-commerce sites.</p>
+                            </div><!--//item-->
+                            <div class="item">
+                                <h3 class="title">Web Developer - <span class="place"><a href="http://layeronemedia.com/">Layer One Media</a>/<a href="http://www.redarrowsoftware.com/">Red Arrow Labs</a></span> <span class="year">(2013 - 2014)</span></h3>
+                                <p>For Layer One Media, I worked with clients to build sites designed for high traffic. Using Umbraco CMS, I built Pink Glove Dance's voting site, which handles at most 50 votes per second. For Red Arrow Labs, I helped with a Backbone-based interface to work with an existing application.</p>
+                            </div><!--//item-->
+                            
+                            <div class="item">
+                                <h3 class="title">Application Developer - <span class="place"><a href="http://www.ascedia.com/">Ascedia</a></span> <span class="year">(2011 - 2013)</span></h3>
+                                <p>As a part of this web agency, I built web sites for clients from big to small using C#, ASP.NET, PHP, and/or JavaScript, sometimes all. I often had to figure out new technologies (Orchard CMS, Bing Maps AJAX, Knockout.JS to name a few) with very little time to produce big projects (Bank Mutual, Travel Wisconsin's Fall Color Report, and Travel Wisconsin.com respectively) and successfully did so (the Fall Color Report won 3 Communicator Awards in 2013 for Website's Home Page, Structure and Navigation, and Visual Appeal).</p>
+                            </div><!--//item-->
+                            
+                            <div class="item">
+                                <h3 class="title">IS Intern - <span class="place"><a href="http://abdata.com/">A. B. Data Ltd.</a></span> <span class="year">(2010 - 2011)</span></h3>
+                                <p>First job out of college, I started here as an intern after impressing my boss with an application in C# using the framework the company used, DevExpress. I started building applications for the company's phone bank operators using C# and DevExpress. Along the way, I helped out with multiple ASP.NET sites for the company, including some in multiple languages. The final project I was starting on before my departure was interfacing with a bar code scanner to read bar codes on post cards going down an assembly line.</p>
+                            </div><!--//item-->
+                            
+                        </div><!--//content-->  
+                    </div><!--//section-inner-->                 
+                </section><!--//section-->
+            </div><!--//primary-->
+            <div class="secondary col-md-4 col-sm-12 col-xs-12">
+                 <aside class="info aside section">
+                    <div class="section-inner">
+                        <h2 class="heading sr-only">Basic Information</h2>
+                        <div class="content">
+                            <ul class="list-unstyled">
+                                <li><i class="fa fa-map-marker"></i><span class="sr-only">Location:</span>Milwaukee, WI</li>
+                                <li><i class="fa fa-envelope-o"></i><span class="sr-only">Email:</span>foilking21@gmail.com</li>
+                                <li><i class="fa fa-link"></i><span class="sr-only">Website:</span><a href="index.html">https://foilking.dev/</a></li>
+								<li><i class="fa fa-book"></i><span class="sr-only">Blog:</span><a href="blog.html">https://foilking.dev/blog</a></li>
+                            </ul>
+                        </div><!--//content-->  
+                    </div><!--//section-inner-->                 
+                </aside><!--//aside-->
+                
+                <aside class="skills aside section">
+                    <div class="section-inner">
+                        <h2 class="heading">Skills</h2>
+                        <div class="content">
+                            <p class="intro">
+                                Educated in C++ and Java through college, I've worked mostly in C#, ASP.NET, .NET Core, and JavaScript since leaving. I've continually been learning new languages, frameworks, and libraries, both in a professional and personal setting.</p>
+                            <div class="skillset">
+                               
+                                <div class="item">
+                                    <h3 class="level-title">C#<span class="level-label">Professional</span></h3>
+                                    <div class="level-bar">
+                                        <div class="level-bar-inner" data-level="90%">
+                                        </div>                                      
+                                    </div><!--//level-bar-->                                 
+                                </div><!--//item-->
+
+                                <div class="item">
+                                    <h3 class="level-title">ASP.NET<span class="level-label">Professional</span></h3>
+                                    <div class="level-bar">
+                                        <div class="level-bar-inner" data-level="90%">
+                                        </div>                                      
+                                    </div><!--//level-bar-->                                 
+                                </div><!--//item-->
+
+                                <div class="item">
+                                    <h3 class="level-title">.NET Core<span class="level-label">Professional</span></h3>
+                                    <div class="level-bar">
+                                        <div class="level-bar-inner" data-level="90%">
+                                        </div>                                      
+                                    </div><!--//level-bar-->                                 
+                                </div><!--//item-->
+                                
+                                <div class="item">
+                                    <h3 class="level-title">Javascript<span class="level-label">Professional</span></h3>
+                                    <div class="level-bar">
+                                        <div class="level-bar-inner" data-level="90%">
+                                        </div>                                      
+                                    </div><!--//level-bar-->                                 
+                                </div><!--//item-->
+                                
+                                <div class="item">
+                                    <h3 class="level-title">SQL<span class="level-label">Professional</span></h3>
+                                    <div class="level-bar">
+                                        <div class="level-bar-inner" data-level="90%">
+                                        </div>                                      
+                                    </div><!--//level-bar-->                                 
+                                </div><!--//item-->
+                                
+                                <div class="item">
+                                    <h3 class="level-title">Git<span class="level-label">Professional</span></h3>
+                                    <div class="level-bar">
+                                        <div class="level-bar-inner" data-level="90%">
+                                        </div>                                      
+                                    </div><!--//level-bar-->                                 
+                                </div><!--//item-->
+                                
+                                <div class="item">
+                                    <h3 class="level-title">React<span class="level-label">Experienced</span></h3>
+                                    <div class="level-bar">
+                                        <div class="level-bar-inner" data-level="85%">
+                                        </div>                                      
+                                    </div><!--//level-bar-->                                 
+                                </div><!--//item-->
+                                
+                                <div class="item">
+                                    <h3 class="level-title">TypeScript<span class="level-label">Experienced</span></h3>
+                                    <div class="level-bar">
+                                        <div class="level-bar-inner" data-level="85%">
+                                        </div>                                      
+                                    </div><!--//level-bar-->                                 
+                                </div><!--//item-->
+                                
+                                <div class="item">
+                                    <h3 class="level-title">HTML &amp; CSS<span class="level-label">Knowledgable</span></h3>
+                                    <div class="level-bar">
+                                        <div class="level-bar-inner" data-level="80%">
+                                        </div>                                      
+                                    </div><!--//level-bar-->                                 
+                                </div><!--//item-->
+                                
+                            </div>              
+                        </div><!--//content-->  
+                    </div><!--//section-inner-->                 
+                </aside><!--//section-->
+                
+                <aside class="education aside section">
+                    <div class="section-inner">
+                        <h2 class="heading">Education</h2>
+                        <div class="content">
+                            <div class="item">                      
+                                <h3 class="title"><i class="fa fa-graduation-cap"></i> Bachelor of Science in Software Engineering</h3>
+                                <h4 class="university">Milwaukee School of Engineering <span class="year">(2006-2010)</span></h4>
+                            </div><!--//item-->
+                        </div><!--//content-->
+                    </div><!--//section-inner-->
+                </aside><!--//section-->
+                
+                <!-- <aside class="blog aside section">
+                    <div class="section-inner">
+                        <h2 class="heading">Latest Blog Posts</h2>
+                        <div id="rss-feeds" class="content">
+
+                        </div>
+                    </div>
+                </aside>-->
+                
+                <aside class="list conferences aside section">
+                    <div class="section-inner">
+                        <h2 class="heading">Conferences</h2>
+                        <div class="content">
+                            <ul class="list-unstyled">
+                                <li><i class="fa fa-calendar"></i> <a href="http://2013.jsconf.us/">JSConf 2013</a> (Amelia Island, FL)</li>
+                                <li><i class="fa fa-calendar"></i> <a href="http://orchardharvest.org/" target="_blank">Orchard Harvest 2012</a> (Santa Monica, CA)</li>
+                                <li><i class="fa fa-calendar"></i> <a href="https://developers.google.com/events/io/2012/" target="_blank">Google I/O 2012</a> (San Francisco, CA)</li>
+                            </ul>
+                        </div><!--//content-->
+                    </div><!--//section-inner-->
+                </aside><!--//section-->
+                
+            </div><!--//secondary-->    
+        </div><!--//row-->
+    </div><!--//masonry-->
+    
+    <!-- ******FOOTER****** --> 
+    <footer class="footer">
+        <div class="container text-center">
+                <small class="copyright">Designed with <i class="fa fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">3rd Wave Media</a> for developers</small>
+        </div><!--//container-->
+    </footer><!--//footer-->
+ 
+    <!-- Javascript -->          
+    <script type="text/javascript" src="assets/plugins/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>    
+    <script type="text/javascript" src="assets/plugins/jquery-rss/dist/jquery.rss.min.js"></script> 
+    <script type="text/javascript" src="assets/js/main.js"></script>            
 </body>
 </html> 
 
